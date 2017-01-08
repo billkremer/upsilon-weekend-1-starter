@@ -1,8 +1,60 @@
-#employees p {
-  margin: 1px 1px;
-  padding: 1px 1px;
+body {
+  	width: calc(100% - 30px);
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 10px auto;
+}
+
+
+#centeringClass {
+  margin: 0 auto;
+}
+
+.formDataColumns {
+  width: 400px;
+  border: 1px solid purple;
+  float:left;
+  display: block;
+  padding: 10px 1% 10px 1%;
+
+}
+
+/*.formDataColumns:first-child {
+  margin: 5px 2px 5px auto;
+}
+
+.formDataColumns:last-child {
+  margin: 5px auto 5px 2px;
+}
+*/
+.formDataColumns p {
+  text-align: right;
+  padding: 5px 5% 5px 5px;
+}
+/*
+.formDataColumns label,input {
+  right: 5%;
+}
+*/
+.formDataColumns label {
+}
+
+.formDataColumns input {
+/*  border: 1px solid black; */
+  width: 200px;
   height: 1.5em;
 }
+
+#formEmployeeSubmit {
+  background-color: beige;
+  height: 1.9em;
+  font-size: 1em;
+  border-radius: 6px;
+  width: 205px
+}
+
+
 
 
 .employeeDataColumn {
@@ -11,6 +63,7 @@
   float: left;
   display: block;
   margin: 5px 2px;
+
 }
 
 .employeeDataColumn span {
@@ -22,17 +75,21 @@
   margin-bottom: 15px; */
 }
 
+#employees {
+  clear: both;
+}
+
+#employees p {
+  margin: 1px 1px;
+  padding: 1px 1px;
+  height: 1.5em;
+}
 
 
 #monthlySalary {
   clear: both;
 }
 
-.employeeDataColumnTitle {
-  text-decoration: underline;
-
-
-}
 
 
 .FName {
@@ -53,4 +110,8 @@
 
 .AnnSal {
   background-color: tomato;
+}
+
+.DelButton {
+  background-color: lightpink;
 }

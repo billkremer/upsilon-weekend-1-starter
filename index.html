@@ -13,17 +13,36 @@
 
   <body>
     <form>
-      <label for="employeeFirstName">First Name</label>
-      <input type="text" id="employeeFirstName" name="employeeFirstName" />
-      <label for="employeeLastName">Last Name</label>
-      <input type="text" id="employeeLastName" name="employeeLastName" />
-      <label for="employeeIdNumber">ID Number</label>
-      <input type="text" name="employeeIdNumber" />
-      <label for="employeeJobTitle">Job Title</label>
-      <input type="text" id="employeeJobTitle" name="employeeJobTitle" />
-      <label for="employeeAnnualSalary">Annual Salary</label>
-      <input type="number" step="0.01" id="employeeAnnualSalary" name="employeeAnnualSalary" />
-      <input type="submit" value="Submit" />
+      <div id="centeringClass"
+      <div class="formDataColumns" >
+        <p>
+          <label for="employeeFirstName">First Name</label>
+          <input type="text" id="employeeFirstName" name="employeeFirstName" />
+        </p>
+        <p>
+          <label for="employeeIdNumber">ID Number</label>
+          <input type="text" name="employeeIdNumber" />
+        </p>
+        <p>
+          <label for="employeeAnnualSalary">Annual Salary</label>
+          <input type="number" step=0.01 min=0 id="employeeAnnualSalary" name="employeeAnnualSalary" />
+        </p>
+      </div>
+
+      <div class="formDataColumns" >
+      <p>
+        <label for="employeeLastName">Last Name</label>
+        <input type="text" id="employeeLastName" name="employeeLastName" />
+      </p>
+      <p>
+        <label for="employeeJobTitle">Job Title</label>
+        <input type="text" id="employeeJobTitle" name="employeeJobTitle" />
+      </p>
+      <p>
+        <input type="submit" value="Submit" id='formEmployeeSubmit' />
+      </p>
+      </div>
+    </div>
     </form>
 
     <div id="employees">
@@ -33,8 +52,8 @@
       <div class='employeeDataColumn ID'><span>ID</span></div>
       <div class='employeeDataColumn Title'><span>Title</span></div>
       <div class='employeeDataColumn AnnSal'><span>Annual Salary</span></div>
-<!--      <div class='columnClass six'>DeleteButton</div>
-to be added in Hard or Pro Mode? -->
+      <div class='employeeDataColumn DelButton'><span>Delete Button</span></div>
+
       <!-- to be added via JavaScript -->
 
 
