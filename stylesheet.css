@@ -1,0 +1,56 @@
+#employees p {
+  margin: 1px 1px;
+  padding: 1px 1px;
+  height: 1.5em;
+}
+
+
+.employeeDataColumn {
+  width: 15%;
+  border: 1px solid gray;
+  float: left;
+  display: block;
+  margin: 5px 2px;
+}
+
+.employeeDataColumn span {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.1em;
+/*  doesn't seem to change...
+  padding-bottom: 15px;
+  margin-bottom: 15px; */
+}
+
+
+
+#monthlySalary {
+  clear: both;
+}
+
+.employeeDataColumnTitle {
+  text-decoration: underline;
+
+
+}
+
+
+.FName {
+  background-color: lightblue;
+}
+
+.LName {
+  background-color: lightgreen;
+}
+
+.ID {
+  background-color: yellow;
+}
+
+.Title {
+  background-color: blanchedalmond;
+}
+
+.AnnSal {
+  background-color: tomato;
+}

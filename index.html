@@ -8,7 +8,9 @@
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
       crossorigin="anonymous"></script>
     <script src="app.js" charset="utf-8"></script>
-    </head>
+    <link rel='stylesheet' href="stylesheet.css">
+  </head>
+
   <body>
     <form>
       <label for="employeeFirstName">First Name</label>
@@ -17,12 +19,33 @@
       <input type="text" id="employeeLastName" name="employeeLastName" />
       <label for="employeeIdNumber">ID Number</label>
       <input type="text" name="employeeIdNumber" />
+      <label for="employeeJobTitle">Job Title</label>
+      <input type="text" id="employeeJobTitle" name="employeeJobTitle" />
+      <label for="employeeAnnualSalary">Annual Salary</label>
+      <input type="number" step="0.01" id="employeeAnnualSalary" name="employeeAnnualSalary" />
       <input type="submit" value="Submit" />
     </form>
 
     <div id="employees">
-      <h2>Employees</h2>
+      <h2>Employee List</h2>
+      <div class='employeeDataColumn FName'><span>First Name</span></div>
+      <div class='employeeDataColumn LName'><span>Last Name</span></div>
+      <div class='employeeDataColumn ID'><span>ID</span></div>
+      <div class='employeeDataColumn Title'><span>Title</span></div>
+      <div class='employeeDataColumn AnnSal'><span>Annual Salary</span></div>
+<!--      <div class='columnClass six'>DeleteButton</div>
+to be added in Hard or Pro Mode? -->
       <!-- to be added via JavaScript -->
+
+
     </div>
+
+    <div id=monthlySalary>
+
+        <h2>Monthly Salary Expenditure:</h2>
+    </div>
+
+
+
   </body>
 </html>
