@@ -15,7 +15,8 @@ $(function () {
 
     formData.employeeSecretID = Math.floor((Math.random() * 10000000) + 1);
     // an identifier for deleting data later.
-    console.log(formData.employeeSecretID);
+        console.log(formData.employeeSecretID);
+        console.log(formData.employeeAnnualSalary);
 
     if (isNaN(parseFloat(formData.employeeAnnualSalary))) {
       formData.employeeAnnualSalary = 0;
@@ -30,14 +31,23 @@ $(function () {
   });
 
 
-  $('#employees').click('button', function()  {
-    var temp = $(this).find('.employee').attr('class').split(' ')[1];
-    // searches up the DOM and returns the secretID of the button pressed
-    $("." + temp).remove(); // removes everything with the secretID class!
+  $('#employees').on('click','button', function()  {
+
+    var getSecretID = $(this).attr('data-secID');
+    // takes the data attribute from the button clicked
+    // var getSecretID = $(this).data('secID'); //doesn't work...?
+
+    var removedEmployeeSalary = parseFloat($('.AnnSal').children("." + getSecretID).text().split(' ')[1]);
+    // to get the value of the annual salary being deleted.
+    // .split because the "$ " added to the salary.
+    totalAnnualSalary -= removedEmployeeSalary;
+    appendMonthlyExpenditure(totalAnnualSalary);
+    // modifies the global variable totalAnnualSalary and re-appends to the DOM
+
+    $("." + getSecretID).remove(); // removes everything with the secretID class!
   });
 
 });
-
 
 
 function appendMonthlyExpenditure(annSalExp) {
@@ -49,12 +59,13 @@ function appendMonthlyExpenditure(annSalExp) {
 
 
 function appendDom(emp) {
-  var $empFName = $('<div class="employee '+ emp.employeeSecretID  +'"></div>');
-  var $empLName = $('<div class="employee '+ emp.employeeSecretID  +'"></div>');
-  var $empID = $('<div class="employee '+ emp.employeeSecretID  +'"></div>');
-  var $empJobTitle = $('<div class="employee '+ emp.employeeSecretID  +'"></div>');
-  var $empAnnualSalary = $('<div class="employee '+ emp.employeeSecretID  +'"></div>');
-  var $empDeleteButton = $('<div class="employee '+ emp.employeeSecretID  +'"></div>');
+  // function for appending the employee data in the DOM
+  var $empFName = $('<div class="'+ emp.employeeSecretID  +'"></div>');
+  var $empLName = $('<div class="'+ emp.employeeSecretID  +'"></div>');
+  var $empID = $('<div class="'+ emp.employeeSecretID  +'"></div>');
+  var $empJobTitle = $('<div class="'+ emp.employeeSecretID  +'"></div>');
+  var $empAnnualSalary = $('<div class="'+ emp.employeeSecretID  +'"></div>');
+  var $empDeleteButton = $('<div class="'+ emp.employeeSecretID  +'"></div>');
 
 
   $empFName.append('<p>' + emp.employeeFirstName + '</p>');
@@ -62,8 +73,8 @@ function appendDom(emp) {
   $empID.append('<p>' + emp.employeeIdNumber + '</p>');
   $empJobTitle.append('<p>' + emp.employeeJobTitle + '</p>');
   $empAnnualSalary.append('<p>$ ' + emp.employeeAnnualSalary + '</p>');
-  $empDeleteButton.append('<p><button>Delete</button></p>');
-
+  $empDeleteButton.append('<p><button data-secID="' + emp.employeeSecretID + '">Delete</button></p>');
+  // add data to delete button for catching the specific class for use during deletion.
 
   $('#employees').find('.FName').append($empFName);
   $('#employees').find('.LName').append($empLName);
@@ -75,6 +86,6 @@ function appendDom(emp) {
 
 
 function clearForm() {
-  $('form').find('input[type=text]').val('');
-  $('form').find('input[type=number]').val(null);
+  $('form').find('input[type=text]').val('');  // resets all text to empty string
+  $('form').find('input[type=number]').val(null); // resets number to null
 }
