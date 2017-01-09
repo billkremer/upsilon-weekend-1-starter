@@ -10,3 +10,8 @@ One problem arises with very long names or titles (greater than 30 characters). 
 
 ## Author: Bill Kremer ##
 ### Publication Date: Jan 8, 2017 ##
+
+This page can be trialled at:
+https://billkremer.github.io/upsilon-weekend-1-starter/
+
+Please forward any issues or concerns.
