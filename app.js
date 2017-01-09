@@ -31,13 +31,16 @@ $(function () {
 
   $('#employees').on('click','button', function()  {
     // this function deletes data and resets the totalAnnualSalary
-    if (!confirm("Are you sure you want to delete :" + formData.employeeFirstName + " " + formData.employeeLastName + "?")) {
-      return;
-    };
-    
+
     var getSecretID = $(this).attr('data-secID');
     // takes the data attribute from the button clicked
     // var getSecretID = $(this).data('secID'); //doesn't work...?
+
+    var employeeToBeDeletedFN = $('.FName').children('.' + getSecretID).text();
+    var employeeToBeDeletedLN = $('.LName').children('.' + getSecretID).text();
+    if (!confirm("Are you sure you want to delete: " + employeeToBeDeletedFN + " " + employeeToBeDeletedLN + "?")) {
+      return;
+    }; // returns out of the function if the confirm = no
 
     var removedEmployeeSalary = parseFloat($('.AnnSal').children("." + getSecretID).text().split(' ')[1]);
     // to get the value of the annual salary being deleted.
