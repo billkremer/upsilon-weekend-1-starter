@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Weekend 1</title>
+    <title>Salary Input form with Monthly Salary Expenditure Calculation</title>
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -13,56 +13,58 @@
 
   <body>
     <form>
-      <div id="centeringClass"
+        <h2>Salary Input Form</h2>
       <div class="formDataColumns" >
         <p>
           <label for="employeeFirstName">First Name</label>
           <input type="text" id="employeeFirstName" name="employeeFirstName" />
         </p>
         <p>
+          <label for="employeeLastName">Last Name</label>
+          <input type="text" id="employeeLastName" name="employeeLastName" />
+        </p>
+        <p>
           <label for="employeeIdNumber">ID Number</label>
           <input type="text" name="employeeIdNumber" />
+        </p>
+
+      </div>
+
+      <div class="formDataColumns" >
+        <p>
+          <label for="employeeJobTitle">Job Title</label>
+          <input type="text" id="employeeJobTitle" name="employeeJobTitle" />
         </p>
         <p>
           <label for="employeeAnnualSalary">Annual Salary</label>
           <input type="number" step=0.01 min=0 id="employeeAnnualSalary" name="employeeAnnualSalary" />
         </p>
+        <p>
+          <input type="submit" value="Submit" id='formEmployeeSubmit' />
+        </p>
       </div>
-
-      <div class="formDataColumns" >
-      <p>
-        <label for="employeeLastName">Last Name</label>
-        <input type="text" id="employeeLastName" name="employeeLastName" />
-      </p>
-      <p>
-        <label for="employeeJobTitle">Job Title</label>
-        <input type="text" id="employeeJobTitle" name="employeeJobTitle" />
-      </p>
-      <p>
-        <input type="submit" value="Submit" id='formEmployeeSubmit' />
-      </p>
-      </div>
-    </div>
     </form>
 
-    <div id="employees">
-      <h2>Employee List</h2>
-      <div class='employeeDataColumn FName'><span>First Name</span></div>
-      <div class='employeeDataColumn LName'><span>Last Name</span></div>
-      <div class='employeeDataColumn ID'><span>ID</span></div>
-      <div class='employeeDataColumn Title'><span>Title</span></div>
-      <div class='employeeDataColumn AnnSal'><span>Annual Salary</span></div>
-      <div class='employeeDataColumn DelButton'><span>Delete Button</span></div>
 
-      <!-- to be added via JavaScript -->
+    <div class='dataCenteringClass'>
+      <div id="employees">
+        <h2>Employee List</h2>
+        <div class='employeeDataColumn FName'><span>First Name</span></div>
+        <div class='employeeDataColumn LName'><span>Last Name</span></div>
+        <div class='employeeDataColumn ID'><span>ID</span></div>
+        <div class='employeeDataColumn Title'><span>Title</span></div>
+        <div class='employeeDataColumn AnnSal'><span>Annual Salary</span></div>
+        <div class='employeeDataColumn DelButton'><span>Delete</span></div>
 
+        <!-- to be added via JavaScript -->
+
+      </div>
+
+      <div id=monthlySalary>
+<br />
+          <h2>Monthly Salary Expenditure:</h2>
+      </div>
     </div>
-
-    <div id=monthlySalary>
-
-        <h2>Monthly Salary Expenditure:</h2>
-    </div>
-
 
 
   </body>

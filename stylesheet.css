@@ -6,77 +6,77 @@ body {
     margin: 10px auto;
 }
 
-
-#centeringClass {
-  margin: 0 auto;
+form {
+  width: 80%;
+  margin: 10px auto;
 }
+
 
 .formDataColumns {
-  width: 400px;
-  border: 1px solid purple;
-  float:left;
+  width: 330px;
+/*  border: 1px solid purple; */
   display: block;
   padding: 10px 1% 10px 1%;
-
+  margin: 5px auto;
 }
 
-/*.formDataColumns:first-child {
-  margin: 5px 2px 5px auto;
+form:first-child .formDataColumns {
+  float: left;
 }
 
-.formDataColumns:last-child {
-  margin: 5px auto 5px 2px;
-}
-*/
 .formDataColumns p {
   text-align: right;
   padding: 5px 5% 5px 5px;
 }
-/*
-.formDataColumns label,input {
-  right: 5%;
-}
-*/
+
 .formDataColumns label {
 }
 
 .formDataColumns input {
 /*  border: 1px solid black; */
   width: 200px;
-  height: 1.5em;
+  height: 1.7em;
+  font-size: 0.95em;
+  padding: 2px 3px;
 }
 
 #formEmployeeSubmit {
-  background-color: beige;
-  height: 1.9em;
+  background-color: whitesmoke;
+  height: 2.1em;
   font-size: 1em;
   border-radius: 6px;
-  width: 205px
+  width: 210px
 }
 
-
-
+.dataCenteringClass {
+  width: 98%;
+  margin: 10px auto;
+}
 
 .employeeDataColumn {
-  width: 15%;
+  width: calc((98% - 130px)/5);
   border: 1px solid gray;
   float: left;
   display: block;
   margin: 5px 2px;
-
+  padding: 2px 2px;
 }
 
 .employeeDataColumn span {
   font-weight: bold;
   text-decoration: underline;
   font-size: 1.1em;
-/*  doesn't seem to change...
-  padding-bottom: 15px;
-  margin-bottom: 15px; */
 }
+
+/* .employeeDataColumn:nth-child(odd) p {
+  background-color: darkblue;
+  color: green;
+} initial attempt to highlight alternating rows in the employee list */
 
 #employees {
   clear: both;
+  width: 99%;
+  margin: 0 auto;
 }
 
 #employees p {
@@ -85,12 +85,10 @@ body {
   height: 1.5em;
 }
 
-
 #monthlySalary {
   clear: both;
+  width: 99%;
 }
-
-
 
 .FName {
   background-color: lightblue;
@@ -101,7 +99,7 @@ body {
 }
 
 .ID {
-  background-color: yellow;
+  background-color: lavender;
 }
 
 .Title {
@@ -109,9 +107,10 @@ body {
 }
 
 .AnnSal {
-  background-color: tomato;
+  background-color: gold;
 }
 
 .DelButton {
-  background-color: lightpink;
+  background-color: tomato;
+  width: 80px;
 }

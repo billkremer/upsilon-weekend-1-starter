@@ -1,12 +1,12 @@
 $(function () {
-//  console.log('document is ready');
   var totalAnnualSalary = 0;
+  var formData = {};
 
   $('form').on('submit', function (event) {
     event.preventDefault();
 
 
-    var formData = {};
+
     var formAsArray = $(this).serializeArray();
 
     formAsArray.forEach(function (input) {
@@ -15,8 +15,6 @@ $(function () {
 
     formData.employeeSecretID = Math.floor((Math.random() * 10000000) + 1);
     // an identifier for deleting data later.
-        console.log(formData.employeeSecretID);
-        console.log(formData.employeeAnnualSalary);
 
     if (isNaN(parseFloat(formData.employeeAnnualSalary))) {
       formData.employeeAnnualSalary = 0;
@@ -32,7 +30,11 @@ $(function () {
 
 
   $('#employees').on('click','button', function()  {
-
+    // this function deletes data and resets the totalAnnualSalary
+    if (!confirm("Are you sure you want to delete :" + formData.employeeFirstName + " " + formData.employeeLastName + "?")) {
+      return;
+    };
+    
     var getSecretID = $(this).attr('data-secID');
     // takes the data attribute from the button clicked
     // var getSecretID = $(this).data('secID'); //doesn't work...?
@@ -86,6 +88,7 @@ function appendDom(emp) {
 
 
 function clearForm() {
+  // this function resets all of the values in the form for entering another ee
   $('form').find('input[type=text]').val('');  // resets all text to empty string
   $('form').find('input[type=number]').val(null); // resets number to null
 }
