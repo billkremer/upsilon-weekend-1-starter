@@ -33,7 +33,6 @@ form:first-child .formDataColumns {
 }
 
 .formDataColumns input {
-/*  border: 1px solid black; */
   width: 200px;
   height: 1.7em;
   font-size: 0.95em;
@@ -68,10 +67,9 @@ form:first-child .formDataColumns {
   font-size: 1.1em;
 }
 
-/* .employeeDataColumn:nth-child(odd) p {
-  background-color: darkblue;
-  color: green;
-} initial attempt to highlight alternating rows in the employee list */
+.employeeDataColumn div:nth-of-type(5n) {
+  border-bottom: 1px solid black;
+} /* puts a line in every fifth row*/
 
 #employees {
   clear: both;

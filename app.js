@@ -5,8 +5,6 @@ $(function () {
   $('form').on('submit', function (event) {
     event.preventDefault();
 
-
-
     var formAsArray = $(this).serializeArray();
 
     formAsArray.forEach(function (input) {
@@ -59,9 +57,8 @@ function appendMonthlyExpenditure(annSalExp) {
   // function for appending the Monthly Salary in the Dom
   var $totalAnnualSalaries = annSalExp;
 
-  // $('#monthlySalary').find('h2').text("Monthly Salary Expenditure: $" + (Math.round( parseFloat($totalAnnualSalaries)*100/12))/100 );
-
     $('#monthlySalary').find('h2').text("Monthly Salary Expenditure: $ " +  (parseFloat($totalAnnualSalaries)/12).toFixed(2));
+    // replaces the monthly salary string in the DOM
 };
 
 
