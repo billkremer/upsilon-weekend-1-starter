@@ -59,7 +59,9 @@ function appendMonthlyExpenditure(annSalExp) {
   // function for appending the Monthly Salary in the Dom
   var $totalAnnualSalaries = annSalExp;
 
-  $('#monthlySalary').find('h2').text("Monthly Salary Expenditure: $" + (Math.round( parseFloat($totalAnnualSalaries)*100/12))/100 );
+  // $('#monthlySalary').find('h2').text("Monthly Salary Expenditure: $" + (Math.round( parseFloat($totalAnnualSalaries)*100/12))/100 );
+
+    $('#monthlySalary').find('h2').text("Monthly Salary Expenditure: $ " +  (parseFloat($totalAnnualSalaries)/12).toFixed(2));
 };
 
 
