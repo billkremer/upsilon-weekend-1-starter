@@ -2,7 +2,7 @@
 
 # Salary Input form with Monthly Salary Expenditure Calculation
 
-This repository uses jQuery to populate a webpage with employee data using form entry fields then calculating the monthly salary expenditures by totaling the annual salaries of all entered employees and dividing by twelve (12).
+This repository uses jQuery to populate a webpage with employee data using form entry fields then calculates the Monthly Salary Expenditure by totaling the annual salaries of all entered employees and dividing by twelve (12).
 
 Additional functionality is added by allowing the user to delete employees.  The Monthly Salary Expenditure is then updated.
 
